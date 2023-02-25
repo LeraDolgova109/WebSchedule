@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Navbar from "@/components/UI/Navbar.vue"
+import Navbar from "@/components/Navbar.vue"
   export default{
     components: {
       Navbar
@@ -25,6 +25,7 @@ import Navbar from "@/components/UI/Navbar.vue"
 
 .app {
   padding: 20px;
+  height: 1024px;
   background-color: #0D053B;
 }
 
