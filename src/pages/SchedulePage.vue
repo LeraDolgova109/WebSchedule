@@ -3,13 +3,82 @@
     <div class="calendar">Календарь</div>
 
     <div class="scheduleBlock">
-      <div class="datesName" id="date-template" style="display:none;">
-        <div clss="name"></div>
-
+      <div class="dateName">
+        <div class="date"></div>
+        <div class="date"></div>
+        <div class="date"></div>
+        <div class="date"></div>
+        <div class="date"></div>
         <div class="date"></div>
       </div>
-      <div class="timesName">
-        
+    <div class="help">
+      <div class="timeName">
+        <div class="time"></div>
+        <div class="time"></div>
+        <div class="time"></div>
+        <div class="time"></div>
+        <div class="time"></div>
+        <div class="time"></div>
+        <div class="time"></div>
+      </div>
+      <div class="timeSlots">
+        <div class="container">
+          <div class="block block1 block2"></div>
+          <div class="block block1"></div>
+          <div class="block block1"></div>
+          <div class="block block1"></div>
+          <div class="block block1"></div>
+          <div class="block block1 block3"></div>
+        </div>
+        <div class="container">
+          <div class="block block2"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block block3"></div>
+        </div>
+        <div class="container">
+          <div class="block block2"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block block3"></div>
+        </div>
+        <div class="container">
+          <div class="block block2"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block block3"></div>
+        </div>
+        <div class="container">
+          <div class="block block2"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block block3"></div>
+        </div>
+        <div class="container">
+          <div class="block block2"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block"></div>
+          <div class="block block3"></div>
+        </div>
+        <div class="container">
+          <div class="block block2 block4"></div>
+          <div class="block block4"></div>
+          <div class="block block4"></div>
+          <div class="block block4"></div>
+          <div class="block block4"></div>
+          <div class="block block3 block4"></div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -55,23 +124,73 @@ export default {
 }
 .scheduleBlock{
   margin-top: 10px;
-  height: 835px;
+  height: 840px;
   left: 66px;
   top: 136px;
 
   background: rgba(90, 62, 202, 0.6);
   border-radius: 15px;
 }
+.help{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.timeSlots {
+  display: inline-block;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.block {
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 115px;
 
-.timesName {
+  border: 1px solid #E1DFED;
+}
+.block1 {
+  border-top: none;
+}
+
+.block2 {
+  border-left: none;
+}
+
+.block3 {
+  border-right: none;
+}
+.block4 {
+  border-bottom: none;
+}
+.dateName{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.timeName{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.timeName {
-  height: 34px;
-  left: 73px;
-  top: 157px;
+.date {
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 20px;
+
+}
+.time {
+  box-sizing: border-box;
+  position: relative;
+  width: 20px;
+  height: 115px;
+
 }
 </style>
