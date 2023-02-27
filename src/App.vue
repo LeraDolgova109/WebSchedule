@@ -2,10 +2,6 @@
   <navbar></navbar>
   <div class="app"> 
     <router-view></router-view>
-    <my-select
-      v-model="selected"
-      :option="sortOptions"
-    />
   </div>
 </template>
 
@@ -15,15 +11,7 @@ import Navbar from "@/components/Navbar.vue"
     components: {
       Navbar
     },
-    data() {
-      return {
-        selected: '',
-        sortOptions: [
-        {value: 'title', name: 'По названию'},
-        {value: 'body', name: 'По содержимому'},
-      ]
-      }
-    }
+    
   }
 </script>
 

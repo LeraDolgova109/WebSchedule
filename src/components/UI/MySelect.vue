@@ -1,13 +1,13 @@
 <template>
-    <div class="select" >
-        <select :value="modelValue" @change="changeOption">
-            <option disabled value="">Выберите из списка</option>
+    <div class="selectt" >
+        <select  :value="modelValue" @change="changeOption">
+            <option disabled value="" selected>Группа</option>
             <option
-                v-for="option in options"
-                :key="option.value"
-                :value="option.value"
+              v-for="option in options"
+              :key="option.value"
+              :value="option.value"
             >
-                {{ option.name }}
+              {{ option.name }}
             </option>
         </select>
     </div>
@@ -34,14 +34,14 @@
 </script>
   
 <style scoped>
-.select {
+.selectt {
     position: relative;
     margin-bottom: 1rem;
     width: 534px;
     height: 47px;
 }
 
-.select:after {
+.selectt:after {
     content: "";
     display: inline-block;
     border-style: solid;
@@ -60,24 +60,23 @@
     z-index: 1;
 }
 
-.select select {
+.selectt select {
     display: block;
     width: 100%;
     padding: .75rem 2.5rem .75rem 1rem;
-    background: rgba(241, 233, 233, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
-    border-radius: 3px;
     -webkit-appearance: none;
     appearance: none;
 
-    font-family: inherit;
-    font-size: 1rem;
-    color: #444;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #0D053B;
 }
 
-.select select:focus {
-    outline: 0;
-    border-color: #0891e6;
-}
 
 </style>
