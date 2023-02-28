@@ -19,11 +19,13 @@
     line-height: 22px;
     width: 124px;
     height: 35px;
-    left: 353px;
-    top: 21px;
 
     background: #BAF69F;
     border-radius: 5px;
     color: #3B335E;
   }
+  .btn:active {
+  color: #1b172b;
+  box-shadow: 5px 1px 5px black;
+}
   </style>

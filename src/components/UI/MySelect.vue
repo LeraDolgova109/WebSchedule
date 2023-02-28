@@ -53,7 +53,7 @@
     -webkit-transform: rotate(45deg);
     padding: 3px;
     pointer-events: none;
-
+    
     position: absolute;
     top: 35%;
     right: 1rem;

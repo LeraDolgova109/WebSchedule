@@ -4,6 +4,7 @@
       v-bind="selectedOption"
       :option="options"
     />
+    <my-button style="width: 446px;">Сохранить</my-button>
   </div>
 </template>
 
@@ -20,3 +21,11 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.home {
+  width: 100%;
+  display: table;
+  justify-content: center;
+}
+</style>
