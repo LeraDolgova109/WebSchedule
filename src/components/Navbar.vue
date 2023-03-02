@@ -32,13 +32,12 @@ export default{
 <style>
 
 .navbar {
+    width: 100%;
     height: 80px;
     display: flex;
     background-color: #0D053B;
     box-shadow: 2px 2px 25px #3F3578;;
     align-items: center;
-    padding: 0 15px;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -52,6 +51,10 @@ export default{
     border: none;
     background: none;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.button:hover{
+    color: rgb(255, 255, 255);
 }
 
 .selected-button {
@@ -71,5 +74,11 @@ export default{
     color: #3B335E;
 }
 
+.selected-button:hover{
+    background: #3B335E;
+    border-radius: 5px;
+    border: none;
+    color:  rgb(255, 255, 255);
+}
 
 </style>

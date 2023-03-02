@@ -25,8 +25,9 @@ import Navbar from "@/components/Navbar.vue"
 }
 
 .app {
+  height: 100%;
+  min-height: 1024px;
   padding: 20px;
-  height: 1024px;
   background-color: #0D053B;
 }
 
