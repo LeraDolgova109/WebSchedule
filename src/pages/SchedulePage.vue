@@ -3,9 +3,9 @@
     <div class="calendar">
       <div class="btn btn_left"></div>
       <div style="margin-top: -4px; display: flex;">
-        <span style="font-weight: 400; font-size: 20px; color: rgba(241, 233, 233, 0.8);">февраль 13, 2023</span>
+        <span style="font-weight: 400; font-size: 20px; color: rgba(241, 233, 233, 0.8);">{{ date_start }}</span>
         <span style="margin-left: 5px; margin-right: 5px;"> - </span>
-        <span style="font-weight: 400; font-size: 20px; color: rgba(241, 233, 233, 0.8);">февраль 18, 2023</span>
+        <span style="font-weight: 400; font-size: 20px; color: rgba(241, 233, 233, 0.8);">{{ date_end }}</span>
       </div>
       <div class="btn btn_right"></div>
     </div>
@@ -15,32 +15,32 @@
         <div class="date-block">
           <div class="schedule_date-title">
             <span style="font-weight: 600;">пн</span>
-            <span> 13 фев.</span>
+            <span> {{ mon }}</span>
           </div></div>
         <div class="date-block">
           <div class="schedule_date-title">
             <span style="font-weight: 600;">вт</span>
-            <span> 14 фев.</span>
+            <span> {{ tue }}</span>
           </div></div>
         <div class="date-block">
           <div class="schedule_date-title">
             <span style="font-weight: 600;">ср</span>
-            <span> 15 фев.</span>
+            <span> {{ wed }}</span>
           </div></div>
         <div class="date-block">
           <div class="schedule_date-title">
             <span style="font-weight: 600;">чт</span>
-            <span> 16 фев.</span>
+            <span> {{ thur }}</span>
           </div></div>
         <div class="date-block">
           <div class="schedule_date-title">
             <span style="font-weight: 600;">пт</span>
-            <span> 17 фев.</span>
+            <span> {{ fri }}</span>
           </div></div>
         <div class="date-block">
           <div class="schedule_date-title">
             <span style="font-weight: 600;">сб</span>
-            <span> 18 фев.</span>
+            <span> {{ sat }}</span>
           </div></div>
         </div>
 
@@ -125,24 +125,44 @@
         </div>
     </div>
   </div>
+  
 </template>
 
 <script>
 export default {
   data(){
     return {
-      datesName: ["пн", "вт", "ср", "чт", "пт", "сб"],
-      timesName: ["8:45 10:20", "10:35 12:10", "12:25 14:00", "14:45 16:20", "16:35 18:10", "18:25 20:00", "20:15 21:50"],
+      months: {0:"январь", 1:"февраль", 2:"март", 3:"апрель", 4:"май", 5:"июнь", 
+              6:"июль", 7:"август", 8:"сентябрь", 9:"октябрь", 10:"ноябрь", 11:"декабрь"},
+      months_short: {0:"янв", 1:"фев", 2:"мар", 3:"апр", 4:"мая", 5:"июня", 
+              6:"июля", 7:"авг", 8:"сент", 9:"окт", 10:"нояб", 11:"дек"},        
     }
   },
-  methods: {
-    createDaysName(){
-      
+  methods:{
+    getDate: function(){
+      var current = new Date();
+      var weekstart = current.getDate() - current.getDay() + 1;    
+      var weekend = weekstart + 5;
+      this.monday = new Date(current.setDate(weekstart));
+      this.saturday = new Date(current.setDate(weekend));
     },
-    createTimeName(){
-      
+    setDate: function(){
+      var start = this.months[this.monday.getMonth()] + " " + this.monday.getDate() + ", " + this.monday.getFullYear();
+      var end = this.months[this.saturday.getMonth()] + " " + this.saturday.getDate() + ", " + this.saturday.getFullYear();
+      this.date_start = start;
+      this.date_end = end;
+      this.mon = this.monday.getDate() + " " + this.months_short[this.monday.getMonth()];
+      this.tue = this.monday.getDate()+1 + " " + this.months_short[this.monday.getMonth()];
+      this.wed = this.monday.getDate()+2 + " " + this.months_short[this.monday.getMonth()];
+      this.thur = this.monday.getDate()+3 + " " + this.months_short[this.monday.getMonth()];
+      this.fri = this.monday.getDate()+4 + " " + this.months_short[this.monday.getMonth()];
+      this.sat = this.saturday.getDate() + " " + this.months_short[this.saturday.getMonth()];
     }
-  }
+  },
+  beforeMount(){
+    this.getDate(),
+    this.setDate()
+ }
 }
 </script>
 
