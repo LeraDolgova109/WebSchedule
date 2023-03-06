@@ -49,7 +49,14 @@
           <div class="time-block">
           <span style="font-weight: 600;">8:45</span><span> 10:20</span>
           </div>
-          <div class="block block1 block2"></div>
+          <div class="block block1 block2">
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+          </div>
           <div class="block block1"></div>
           <div class="block block1"></div>
           <div class="block block1"></div>
@@ -64,7 +71,20 @@
           <div class="block"></div>
           <div class="block"></div>
           <div class="block"></div>
-          <div class="block"></div>
+          <div class="block">
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+          </div>
           <div class="block block3"></div>
         </div>
         <div class="container">
@@ -74,7 +94,14 @@
           <div class="block block2"></div>
           <div class="block"></div>
           <div class="block"></div>
-          <div class="block"></div>
+          <div class="block">
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+          </div>
           <div class="block"></div>
           <div class="block block3"></div>
         </div>
@@ -84,7 +111,14 @@
         </div>
           <div class="block block2"></div>
           <div class="block"></div>
-          <div class="block"></div>
+          <div class="block">
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+          </div>
           <div class="block"></div>
           <div class="block"></div>
           <div class="block block3"></div>
@@ -96,7 +130,26 @@
           <div class="block block2"></div>
           <div class="block"></div>
           <div class="block"></div>
-          <div class="block"></div>
+          <div class="block">
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+            <my-card
+              :lessonName="lessonName"
+              :teacherName="teacherName"
+              :classRoom="classRoom"
+              :groupName="groupName"
+            />
+          </div>
           <div class="block"></div>
           <div class="block block3"></div>
         </div>
@@ -138,7 +191,11 @@ export default {
       months_short: {0:"янв", 1:"фев", 2:"мар", 3:"апр", 4:"мая", 5:"июня", 
               6:"июля", 7:"авг", 8:"сент", 9:"окт", 10:"нояб", 11:"дек"},   
       date_start: "",
-      date_end: ""
+      date_end: "",
+      lessonName: "Машиннное обучение",
+      teacherName: "Иванов Иван Иванович",
+      classRoom: "Аудитория 302(1)",
+      groupName: "972103"
     }
   },
   methods:{
@@ -249,8 +306,10 @@ span {
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: center;
+  align-items: center;
   width: 15%;
-  
+
   min-width: 192px;
   min-height: 115px;
 
