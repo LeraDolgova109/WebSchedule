@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <my-select
-      v-bind="selectedOption"
-      :option="options"
+      v-model="selectedOption"
+      :options="options"
     />
+    <my-button>Сохранить</my-button>
   </div>
 </template>
 
@@ -13,8 +14,9 @@ export default {
       return {
         selectedOption: '',
         options: [
-          {value: 'title', name: 'По названию'},
-          {value: 'body', name: 'По содержимому'},
+          {value: "1", name: '972101'},
+          {value: "2", name: '972102'},
+          {value: "3", name: '972103'},
       ]
       }
     }

@@ -1,6 +1,6 @@
 <template>
     <div class="selectt" >
-        <select  :value="modelValue" @change="changeOption">
+        <select :value="modelValue" @change="changeOption">
             <option disabled value="" selected>Группа</option>
             <option
               v-for="option in options"

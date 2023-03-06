@@ -26,4 +26,11 @@
     border-radius: 5px;
     color: #3B335E;
   }
+
+  .btn:hover{
+    background: #3B335E;
+    border-radius: 5px;
+    border: none;
+    color:  rgb(255, 255, 255);
+}
   </style>
