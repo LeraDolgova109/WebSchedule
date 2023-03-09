@@ -49,131 +49,184 @@
           <div class="time-block">
           <span style="font-weight: 600;">8:45</span><span> 10:20</span>
           </div>
-          <div class="block block1 block2">
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-          </div>
-          <div class="block block1"></div>
-          <div class="block block1"></div>
-          <div class="block block1"></div>
-          <div class="block block1"></div>
-          <div class="block block1 block3"></div>
+          <my-block 
+            class="block1 block2" 
+            :time_blocks=time_blocks1
+          />
+          <my-block 
+            class="block1" 
+            :time_blocks=time_blocks
+          />
+          <my-block 
+            class="block1" 
+            :time_blocks=time_blocks2
+          />
+          <my-block 
+            class="block1" 
+            :time_blocks=time_blocks1
+          />
+          <my-block 
+            class="block1" 
+            :time_blocks=time_blocks2
+          />
+          <my-block 
+            class="block1 block3" 
+            :time_blocks=time_blocks2
+          />
         </div>
         <div class="container">
           <div class="time-block">
           <span style="font-weight: 600;">10:35</span><span> 12:10</span>
         </div>
-          <div class="block block2"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block">
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-          </div>
-          <div class="block block3"></div>
+          <my-block
+            class="block2"
+            :time_blocks=time_blocks1
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks1
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks
+          />
+          <my-block
+            class="block3"
+            :time_blocks=time_blocks
+          />
         </div>
         <div class="container">
           <div class="time-block">
           <span style="font-weight: 600;">12:25</span><span> 14:00</span>
         </div>
-          <div class="block block2"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block">
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-          </div>
-          <div class="block"></div>
-          <div class="block block3"></div>
+        <my-block
+            class="block2"
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks
+          />
+          <my-block
+            :time_blocks=time_blocks1
+          />
+          <my-block
+            class="block3"
+            :time_blocks=time_blocks2
+          />
         </div>
         <div class="container">
           <div class="time-block">
           <span style="font-weight: 600;">14:45</span><span> 16:20</span>
         </div>
-          <div class="block block2"></div>
-          <div class="block"></div>
-          <div class="block">
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-          </div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block block3"></div>
+        <my-block
+            class="block2"
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks1
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            class="block3"
+            :time_blocks=time_blocks
+          />
         </div>
         <div class="container">
           <div class="time-block">
           <span style="font-weight: 600;">16:35</span><span> 18:10</span>
         </div>
-          <div class="block block2"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block">
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-            <my-card
-              :lessonName="lessonName"
-              :teacherName="teacherName"
-              :classRoom="classRoom"
-              :groupName="groupName"
-            />
-          </div>
-          <div class="block"></div>
-          <div class="block block3"></div>
+        <my-block
+            class="block2"
+            :time_blocks=time_blocks
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks1
+          />
+          <my-block
+            class="block3"
+            :time_blocks=time_blocks2
+          />
         </div>
         <div class="container">
           <div class="time-block">
           <span style="font-weight: 600;">18:25</span><span> 20:00</span>
         </div>
-          <div class="block block2"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block"></div>
-          <div class="block block3"></div>
+        <my-block
+            class="block2"
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks
+          />
+          <my-block
+            :time_blocks=time_blocks2
+          />
+          <my-block
+            :time_blocks=time_blocks1
+          />
+          <my-block
+            class="block3"
+            :time_blocks=time_blocks2
+          />
         </div>
         <div class="container">
           <div class="time-block">
           <span style="font-weight: 600;">20:15</span><span> 21:50</span>
         </div>
-          <div class="block block2 block4"></div>
-          <div class="block block4"></div>
-          <div class="block block4"></div>
-          <div class="block block4"></div>
-          <div class="block block4"></div>
-          <div class="block block3 block4"></div>
+        <my-block 
+            class="block2 block4" 
+            :time_blocks=time_blocks1
+          />
+          <my-block 
+            class="block4" 
+            :time_blocks=time_blocks
+          />
+          <my-block 
+            class="block4" 
+            :time_blocks=time_blocks2
+          />
+          <my-block 
+            class="block4" 
+            :time_blocks=time_blocks2
+          />
+          <my-block 
+            class="block4" 
+            :time_blocks=time_blocks1
+          />
+          <my-block 
+            class="block3 block4" 
+            :time_blocks=time_blocks2
+          />
         </div>
         </div>
     </div>
@@ -192,10 +245,30 @@ export default {
               6:"июля", 7:"авг", 8:"сент", 9:"окт", 10:"нояб", 11:"дек"},   
       date_start: "",
       date_end: "",
-      lessonName: "Машиннное обучение",
-      teacherName: "Иванов Иван Иванович",
-      classRoom: "Аудитория 302(1)",
-      groupName: "972103"
+      time_blocks: [
+          { 
+            lessonName: "Машиннное обучение",
+            teacherName: "Иванов Иван Иванович",
+            classRoom: "Аудитория 302(1)",
+            groupName: "972103"
+          },
+          {
+            lessonName: "Математический анализ",
+          teacherName: "Иванов Иван Иванович",
+          classRoom: "Аудитория 302(1)",
+          groupName: "972103"
+          }
+        ],
+        time_blocks1: [
+          { 
+            lessonName: "Машиннное обучение",
+            teacherName: "Иванов Иван Иванович",
+            classRoom: "Аудитория 302(1)",
+            groupName: "972103"
+          }
+        ],
+        time_blocks3: [
+        ]
     }
   },
   methods:{
@@ -301,26 +374,7 @@ span {
   min-height: 115px;
 
 }
-.block {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 15%;
 
-  min-width: 192px;
-  min-height: 115px;
-
-  border: 1px solid #E1DFED;
-}
-
-.block:hover {
-  -webkit-box-shadow: 0 0 10px #E1DFED inset;
-  -moz-box-shadow: 0 0 10px #E1DFED inset;
-  box-shadow: 0 0 10px #E1DFED inset;
-}
 .block1 {
   border-top: none;
 }

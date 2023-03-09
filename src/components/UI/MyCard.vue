@@ -1,10 +1,10 @@
 <template>
    <div class="card">
       <div class="info">
-         <span>{{ lessonName }}</span>
-         <span>{{ teacherName }}</span>
-         <span>{{ classRoom }}</span>
-         <span>{{ groupName }}</span>
+         <span>{{ time_block.lessonName }}</span>
+         <span>{{ time_block.teacherName }}</span>
+         <span>{{ time_block.classRoom }}</span>
+         <span>{{ time_block.groupName }}</span>
       </div>
    </div>
 
@@ -19,17 +19,20 @@
       }
    },
    props: {
-      lessonName:{
-         type: String
-      },
-      teacherName:{
-         type: String
-      },
-      classRoom:{
-         type: String
-      },
-      groupName:{
-         type: String
+      time_block:{
+         type: Object,
+         lessonName:{
+            type: String
+         },
+         teacherName:{
+            type: String
+         },
+         classRoom:{
+            type: String
+         },
+         groupName:{
+            type: String
+         }
       }
     },
  }
@@ -37,7 +40,7 @@
 
 <style scoped>
 .card{
-   width: 185px;
+   min-width: 185px;
    height: 80px;
    margin: 3px;
    background: #F1E9E9;
