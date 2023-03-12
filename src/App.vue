@@ -2,6 +2,11 @@
   <navbar></navbar>
   <div class="app"> 
     <router-view></router-view>
+
+    <my-dialog :show="true">
+     
+    </my-dialog>
+     
   </div>
 </template>
 
