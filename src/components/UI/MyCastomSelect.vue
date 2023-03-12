@@ -1,6 +1,6 @@
 <template>
     <div class="selectt" >
-        <select v-bind:value="modelValue" @change="changeOption" multiple>
+        <select v-bind:value="modelValue" @change="changeOption">
             <option disabled value="" selected>{{ name }}</option>
             <option
               v-for="option in options"
@@ -15,11 +15,10 @@
   
 <script>
   export default {
-    name: 'my-multselect',
+    name: 'my-casselect',
     props: {
       modelValue: {
-        type: Array,
-        default: () => []
+        type: String
       },
       name: {
         type: String
@@ -38,6 +37,7 @@
 </script>
   
 <style scoped>
+
 .selectt {
     position: relative;
     margin-bottom: 1rem;
@@ -46,6 +46,7 @@
     margin-top: 20px;
     border: none; 
     outline: none;
+    border-bottom: 2px solid rgba(12, 4, 58, 0.8);
 }
 
 .selectt select {
@@ -63,9 +64,8 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    
 
-    color: #0D053B;
+    color:  rgba(59, 51, 94, 0.9);
 }
-
-
 </style>

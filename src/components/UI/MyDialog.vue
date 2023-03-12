@@ -1,28 +1,44 @@
 <template>
     <div class="dialog" v-if="show" @click.stop="hideDialog">
       <div class="dialog__content" @click.stop>
-        <h1>Новая пара</h1>
-        <my-select class="select"
+        <my-casselect class="select-name"
           v-model="selectedClassname"
           :options="optionsClassname"
           :name="class"
         />
-        <my-select class="select"
-          v-model="selectedTeacher"
-          :options="optionsTeacher"
-          :name="teacher"
-        />
-        <my-select class="select"
-          v-model="selectedClassroom"
-          :options="optionsClassRoom"
-          :name="classroom"
-        />
-        <my-multselect class="select"
-          v-model="selectedGroup"
-          :options="optionsGroup"
-          :name="group"
-        />
-        <my-button style="width: 500px; margin-top: 75px;" @click="postChanges">Сохранить</my-button>
+        <div class="row">
+          <img class="icon" src="@/assets/person.svg" alt="кк"/> 
+          <my-casselect class="select"
+            v-model="selectedTeacher"
+            :options="optionsTeacher"
+            :name="teacher"
+          />
+        </div>
+        <div class="row">
+          <img class="icon" src="@/assets/location.svg" alt="кк"/>      
+          <my-casselect class="select"
+            v-model="selectedClassroom"
+            :options="optionsClassRoom"
+            :name="classroom"
+          />
+        </div>
+        <div class="row">
+          <img class="icon" src="@/assets/period.svg" alt="кк"/> 
+          <my-casselect class="select"
+            v-model="selectedPeriod"
+            :options="optionsPeriod"
+            :name="period"
+          />
+        </div>
+        <div class="row">
+          <img class="icon" src="@/assets/clock.svg" alt="кк"/>
+          <my-multselect class="select"
+            v-model="selectedGroup"
+            :options="optionsGroup"
+            :name="group"
+          />
+        </div>
+        <my-button style="width: 500px; margin-top: 80px;" @click="postChanges">Сохранить</my-button>
         <span v-if="incorrect">Все поля должны быть выбраны</span>
       </div>
     </div>
@@ -39,10 +55,17 @@
         selectedGroup: [],
         selectedTeacher: '',
         selectedClassroom: '',
+        selectedPeriod: '',
         class: 'Название предмета',
         group: "Группа",
         teacher: "Преподаватель",
         classroom: "Аудитория",
+        period: 'Период',
+        optionsPeriod: [
+          {id: 0, name: "Единожды"},
+          {id: 1, name: "Каждую неделю"},
+          {id: 2, name: "Каждый месяц"}
+        ],
         incorrect: false,
       }
     },
@@ -73,7 +96,7 @@
         this.$emit('update:show', false)
       },
       async postChanges(){
-        if (this.selectedClassname == 'this.' || this.selectedGroup == '' || this.selectedTeacher == '' || this.selectedClassroom == ''){
+        if (this.selectedClassname == 'this.' || this.selectedGroup == '' || this.selectedTeacher == '' || this.selectedClassroom == '' || this.selectedPeriod == ''){
             this.incorrect = true;
         }
         else{
@@ -133,33 +156,27 @@
   .dialog__content{
     margin: auto;
     border-radius: 12px;
-    width: 540px;
-    height: 490px;
+    min-width: 540px;
+    min-height: 490px;
     padding: 20px;
     justify-content: center;
     flex-direction: column;
     background: #F1E9E9;
     opacity: 1;
-    border-radius: 5px;
+    border-radius: 15px;
   }
 
   .select{
-    width: 500px;
-    height: 47px;
+    width: 420px;
+    height: 40px;
+    margin-left: 20px;
   }
 
-  h1{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    font-weight: bold;
-
-    color: #3B335E;
-  }
-  h1:hover{
-    color: #0D053B;
+  .select-name{
+    width: 500px; 
+    height: 40px; 
+    font-size: 25px; 
+    line-height: 27px;
   }
 
   span{
@@ -175,5 +192,18 @@
   }
   span:hover{
     color: #3B335E;
+  }
+
+  .row{
+    display: flex;
+    justify-content: left;
+  }
+
+  .icon{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 10px;
   }
   </style>

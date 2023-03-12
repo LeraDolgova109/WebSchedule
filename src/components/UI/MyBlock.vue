@@ -1,6 +1,6 @@
 <template>
     <div class="block" @click="showDialog">
-        <my-dialog 
+        <my-dialog
             v-model:show="dialogVisible"
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
