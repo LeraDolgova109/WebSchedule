@@ -9,7 +9,6 @@
  </template>
  
  <script>
- //v-for="time_block in time_blocks"
   export default {
     name: 'my-block',
     props:{
@@ -21,18 +20,6 @@
     methods:{
         
     }
-    // methods: {
-    //     addBlock() {
-    //         this.inputs.push(
-    //             {
-    //             one: '',
-    //             two: ''
-    //         })
-    //     },
-    //     deleteRow(index) {
-    //     this.inputs.splice(index,1)
-    //     }
-    // }
 }
  </script>
  

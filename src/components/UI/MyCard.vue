@@ -4,6 +4,7 @@
          <span>{{ time_block.lessonName }}</span>
          <span>{{ time_block.teacherName }}</span>
          <span>{{ time_block.classRoom }}</span>
+         <span>{{ time_block.buildingName }}</span>
          <span>{{ time_block.groupName }}</span>
       </div>
    </div>
@@ -30,6 +31,9 @@
          classRoom:{
             type: String
          },
+         buildingName:{
+            type: String
+         },
          groupName:{
             type: String
          }
@@ -41,7 +45,7 @@
 <style scoped>
 .card{
    min-width: 185px;
-   height: 80px;
+   height: 100px;
    margin: 3px;
    background: #F1E9E9;
    border-radius: 5px;

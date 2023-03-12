@@ -1,11 +1,11 @@
 <template>
     <div class="selectt" >
-        <select :value="modelValue" @change="changeOption">
+        <select v-bind:value="modelValue" @change="changeOption">
             <option disabled value="" selected>Группа</option>
             <option
               v-for="option in options"
-              :key="option.value"
-              :value="option.value"
+              :key="option.id"
+              :value="option.name"
             >
               {{ option.name }}
             </option>
