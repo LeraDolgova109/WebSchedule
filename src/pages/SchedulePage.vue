@@ -428,7 +428,7 @@ export default {
       }
       groupsName = groupsName.substring(0, groupsName.length-2);
       let className = "";
-      className = `Аудитория (${info.classroom.name})`;
+      className = `Аудитория ${info.classroom.name}`;
       return {
         lessonName: info.subject.name,
         teacherName: info.teacher.name,
@@ -437,6 +437,10 @@ export default {
         groupName: groupsName}
     },
     async fill_timeslots(){
+      let group_id, teacher_id, classroom_id;
+      localStorage.getItem("selectedGroup") == "null" ? group_id = null : group_id = Number(localStorage.getItem("selectedGroup"));
+      localStorage.getItem("selectedTeacher") == "null" ? teacher_id = null : teacher_id = Number(localStorage.getItem("selectedTeacher"));
+      localStorage.getItem("selectedClassroom") == "null" ? classroom_id = null : classroom_id = Number(localStorage.getItem("selectedClassroom"));
       let str;
       str = this.monday.toISOString().substring(0, 10);
       try{
@@ -444,7 +448,9 @@ export default {
                                         {
                                           params: {
                                             "date_start": str,
-                                            "group_id": Number(localStorage.getItem("selectedGroup")),
+                                            "group_id": group_id,
+                                            "teacher_id": teacher_id,
+                                            "classroom_id": classroom_id
                                           }
                                         }
                                         );

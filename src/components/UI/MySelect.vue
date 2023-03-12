@@ -1,7 +1,7 @@
 <template>
     <div class="selectt" >
         <select v-bind:value="modelValue" @change="changeOption">
-            <option disabled value="" selected>Группа</option>
+            <option disabled value="" selected>{{ name }}</option>
             <option
               v-for="option in options"
               :key="option.id"
@@ -18,6 +18,9 @@
     name: 'my-select',
     props: {
       modelValue: {
+        type: String
+      },
+      name: {
         type: String
       },
       options: {
@@ -39,6 +42,7 @@
     margin-bottom: 1rem;
     width: 534px;
     height: 47px;
+    margin-top: 20px;
 }
 
 .selectt:after {

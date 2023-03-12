@@ -70,7 +70,7 @@ export default{
 
     background: #BAF69F;
     border-radius: 5px;
-    border-color: none;
+    border: none;
     color: #3B335E;
 }
 

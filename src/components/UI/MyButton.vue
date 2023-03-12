@@ -21,9 +21,10 @@
     height: 35px;
     left: 353px;
     top: 21px;
-
+    
     background: #BAF69F;
     border-radius: 5px;
+    border: none;
     color: #3B335E;
   }
 
