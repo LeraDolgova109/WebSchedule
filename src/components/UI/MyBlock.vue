@@ -1,5 +1,12 @@
 <template>
-    <div class="block">
+    <div class="block" @click="showDialog">
+        <my-dialog 
+            v-model:show="dialogVisible"
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
+        ></my-dialog>
         <my-card 
             name="data" 
             v-for="time_block in time_blocks" 
@@ -10,15 +17,38 @@
  
  <script>
   export default {
+    data(){
+        return{
+            dialogVisible: false,
+        }
+    },
     name: 'my-block',
     props:{
         time_blocks:{
             type: Array,
             default: () => []
-        }
+        },
+        optionsClassname:{
+            type: Array,
+            default: () => []
+        },
+        optionsGroup:{
+            type: Array,
+            default: () => []
+        },
+        optionsTeacher:{
+            type: Array,
+            default: () => []
+        },
+        optionsClassRoom:{
+            type: Array,
+            default: () => []
+        },
     },
     methods:{
-        
+        showDialog: function(){
+            this.dialogVisible = true;
+        }
     }
 }
  </script>

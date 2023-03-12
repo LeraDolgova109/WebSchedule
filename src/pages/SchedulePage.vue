@@ -53,31 +53,55 @@
             id="1"
             class="block1 block2" 
             :time_blocks=time_blocks1
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="8"
             class="block1" 
             :time_blocks=time_blocks8
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="15"
             class="block1" 
             :time_blocks=time_blocks15
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="22"
             class="block1" 
             :time_blocks=time_blocks22
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="29"
             class="block1" 
             :time_blocks=time_blocks29
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="36"
             class="block1 block3" 
             :time_blocks=time_blocks36
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         <div class="container">
@@ -88,27 +112,51 @@
             id="2"
             class="block2"
             :time_blocks=time_blocks2
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="9"
             :time_blocks=time_blocks9
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="16"
             :time_blocks=time_blocks16
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="23"
             :time_blocks=time_blocks23
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="30"
             :time_blocks=time_blocks30
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="37"
             class="block3"
             :time_blocks=time_blocks37
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         <div class="container">
@@ -119,27 +167,51 @@
             id="3"
             class="block2"
             :time_blocks=time_blocks3
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="10"
             :time_blocks=time_blocks10
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="17"
             :time_blocks=time_blocks17
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="24"
             :time_blocks=time_blocks24
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="31"
             :time_blocks=time_blocks31
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="38"
             class="block3"
             :time_blocks=time_blocks38
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         <div class="container">
@@ -150,27 +222,51 @@
             id="4"
             class="block2"
             :time_blocks=time_blocks4
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="11"
             :time_blocks=time_blocks11
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="18"
             :time_blocks=time_blocks18
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="25"
             :time_blocks=time_blocks25
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="32"
             :time_blocks=time_blocks32
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="39"
             class="block3"
             :time_blocks=time_blocks39
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         <div class="container">
@@ -181,27 +277,51 @@
             id="5"
             class="block2"
             :time_blocks=time_blocks5
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="12"
             :time_blocks=time_blocks12
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="19"
             :time_blocks=time_blocks19
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="26"
             :time_blocks=time_blocks26
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="33"
             :time_blocks=time_blocks33
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="40"
             class="block3"
             :time_blocks=time_blocks40
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         <div class="container">
@@ -212,27 +332,51 @@
             id="6"
             class="block2"
             :time_blocks=time_blocks6
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="13"
             :time_blocks=time_blocks13
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="20"
             :time_blocks=time_blocks20
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="27"
             :time_blocks=time_blocks27
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="34"
             :time_blocks=time_blocks34
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block
             id="41"
             class="block3"
             :time_blocks=time_blocks41
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         <div class="container">
@@ -243,31 +387,55 @@
             id="7"
             class="block2 block4" 
             :time_blocks=time_blocks7
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="14"
             class="block4" 
             :time_blocks=time_blocks14
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="21"
             class="block4" 
             :time_blocks=time_blocks21
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="28"
             class="block4" 
             :time_blocks=time_blocks28
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="35"
             class="block4" 
             :time_blocks=time_blocks35
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
           <my-block 
             id="42"
             class="block3 block4" 
             :time_blocks=time_blocks42
+            :optionsClassname=optionsClassname
+            :optionsGroup=optionsGroup
+            :optionsTeacher=optionsTeacher
+            :optionsClassRoom=optionsClassRoom
           />
         </div>
         </div>
@@ -278,7 +446,6 @@
 
 <script>
 import axios from 'axios';
-import { onMounted } from 'vue';
 
 export default {
   data(){
@@ -290,6 +457,10 @@ export default {
               6:"июля", 7:"авг", 8:"сент", 9:"окт", 10:"нояб", 11:"дек"},   
       date_start: "",
       date_end: "",
+      optionsClassname: [],
+      optionsGroup: [],
+      optionsTeacher: [],
+      optionsClassRoom: [],
       time_blocks1: [],
       time_blocks2: [],
       time_blocks3: [],
@@ -589,12 +760,60 @@ export default {
         }
         
       }
-    }
+    },
+    async get_classname(){
+        try{
+          const response = await axios.get("http://185.46.8.41/api/subject");
+          
+          this.optionsClassname = response.data;
+        } catch (e){
+          console.log(e);
+        };
+      },
+      async get_groups(){
+        try{
+          const response = await axios.get("http://185.46.8.41/api/group");
+          
+          this.optionsGroup = response.data;
+        } catch (e){
+          console.log(e);
+        };
+      },
+      async get_teachers(){
+        try{
+          const response = await axios.get("http://185.46.8.41/api/teacher");
+          
+          this.optionsTeacher = response.data;
+        } catch (e){
+          console.log(e);
+        };
+      },
+      async get_classrooms(){
+        try{
+          const response = await axios.get("http://185.46.8.41/api/classroom");
+          let dataClass = [];
+          for (let i = 0; i<response.data.length; i++){
+            let address = response.data[i].address;
+            for (let j = 0; j<response.data[i].classrooms.length; j++){
+              let newClass = response.data[i].classrooms[j];
+              newClass.name = `Аудитория ${newClass.name}` + " " + address;
+              dataClass.push(newClass);
+            }
+          }
+          this.optionsClassRoom = dataClass;
+        } catch (e){
+          console.log(e);
+        };
+      },
   },
   beforeMount(){
     this.findDate(),
     this.writeDate(),
-    this.fill_timeslots()
+    this.fill_timeslots(),
+    this.get_classname();
+    this.get_groups();
+    this.get_teachers();
+    this.get_classrooms();
  }
 }
 </script>
