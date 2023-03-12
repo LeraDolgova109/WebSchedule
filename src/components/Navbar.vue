@@ -71,7 +71,7 @@ export default{
     background: #BAF69F;
     border-radius: 5px;
     border: none;
-    color: #3B335E;
+    color: #0D053B;
 }
 
 .selected-button:hover{

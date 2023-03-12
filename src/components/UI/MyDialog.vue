@@ -29,13 +29,14 @@
   </template>
   
   <script>
+  import axios from 'axios';
 
   export default {
     name: 'my-dialog',
     data(){
       return{
         selectedClassname: "",
-        selectedGroup: '',
+        selectedGroup: [],
         selectedTeacher: '',
         selectedClassroom: '',
         class: 'Название предмета',
@@ -71,15 +72,48 @@
       hideDialog() {
         this.$emit('update:show', false)
       },
-      postChanges: function(){
+      async postChanges(){
         if (this.selectedClassname == 'this.' || this.selectedGroup == '' || this.selectedTeacher == '' || this.selectedClassroom == ''){
             this.incorrect = true;
         }
         else{
           this.incorrect = false;
-          this.show = false;
+
+          try{
+            // const headers = { 
+            //   "Access-Control-Allow-Origin": "*",
+            //   "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+            //   "Access-Control-Allow-Headers": "X-Requested-With"
+            // };
+            // const pass = {
+            //     "email":"admin@gmail.com",
+            //     "password":"admin"
+            // }
+            
+            // const response = await axios.get("http://185.46.8.41/sanctum/csrf-cookie");
+            // console.log(response);
+
+            // const response1 = await axios.post("http://185.46.8.41/login", pass, headers);
+            // console.log(response1);
+            
+            // const newClass = {
+            //     "subject_id" : "3",
+            //     "teacher_id" : "3",
+            //     "classroom_id" : "2",
+            //     "timeslot_id" : "8",
+            //     "date_start" : "2023-03-01",
+            //     "date_end" : "2023-03-31",
+            //     "period" : "1",
+            //     "groups_id" : [
+            //         9,10
+            //     ]
+            // };
+            // const response = await axios.post("http://185.46.8.41/api/class", newClass, {headers});
+          } catch (e){
+            console.log(e);
+        };
         }
-      }
+      },
     },
   }
   </script>
@@ -123,6 +157,9 @@
     font-weight: bold;
 
     color: #3B335E;
+  }
+  h1:hover{
+    color: #0D053B;
   }
 
   span{

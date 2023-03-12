@@ -18,7 +18,8 @@
     name: 'my-multselect',
     props: {
       modelValue: {
-        type: String
+        type: Array,
+        default: () => []
       },
       name: {
         type: String

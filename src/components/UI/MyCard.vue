@@ -1,7 +1,7 @@
 <template>
    <div class="card">
       <div class="info">
-         <span>{{ time_block.lessonName }}</span>
+         <span style="font-weight: bold;">{{ time_block.lessonName }}</span>
          <span>{{ time_block.teacherName }}</span>
          <span>{{ time_block.classRoom }}</span>
          <span>{{ time_block.buildingName }}</span>
@@ -45,7 +45,7 @@
 <style scoped>
 .card{
    min-width: 185px;
-   height: 100px;
+   min-height: 100px;
    margin: 3px;
    background: #F1E9E9;
    border-radius: 5px;
@@ -64,7 +64,7 @@
 }
 span{
    display: block;
-   white-space: pre;
+   white-space: normal;
    color: #0D053B;
 }
 .info{

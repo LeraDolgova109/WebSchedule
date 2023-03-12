@@ -103,6 +103,7 @@ export default {
             localStorage.setItem('selectedClassroom', null);
           }
         }
+        this.$router.push('/schedule');
       }
   },
   beforeMount(){
