@@ -9,9 +9,15 @@
                     </div> -->
                 <!-- <hr class="hr-line"> -->
                 <input class="name" type="text" id="subName" placeholder="Название предмета">
-                <input type="text" id="fio" placeholder="Иванов Иван Иванович">
-                <input type="text" id="time" placeholder=" 1 пара">
-                <div class="selectt">
+              
+                    <img class="icon" src="./person.svg" alt="кк"/> 
+                    <input type="text" id="fio" placeholder="Иванов Иван Иванович">
+               
+                    <img class="icon" src="./clock.svg" alt="кк"/> 
+                    <input type="text" id="time" placeholder=" 1 пара">
+                
+                    <img class="icon" src="./period.svg" alt="кк"/> 
+                    <div class="selecttt">
                                 <label for="InputSort" class="form-label fw-weight-bold "></label>
                                 <select class="form-select" id="sort">
                                     <option value="1">единожды</option>
@@ -19,17 +25,17 @@
                                     <option value="2">каждый месяц</option>
                                   
                                 </select>
-                </div>
-                      
-                <input type="text" id="numberClass" placeholder="302 аудитория">
+                    </div>
+              
+                
+                    <img class="icon" src="./location.svg" alt="кк"/>      
+                    <input type="text" id="numberClass" placeholder="302 аудитория">
+              
 
                 <button class="btn_edit" type="submit">
                     <slot>Сохранить</slot>
                 </button>
-                <!-- <img src="Group.png ></img> -->
-                    <div class="per">
-                        <img class="period" src="src/assets/period.svg" alt="">
-                    </div>
+              
                     <!-- <div>{{ selected }}</div>
                     <select v-model="selected">
                         
@@ -37,10 +43,6 @@
                         <option value="0">каждую неделю</option>
                         <option value="1">каждый месяц</option>
                     </select> -->
-                   
-                          
-                  
-    
             </slot>
         </div>
     </div>
@@ -74,10 +76,11 @@ export default {
     margin:auto;
     background: #F1E9E9;
     width: 376px;
-    height: 310px;
+    height: 380px;
     left: 353px;
     top: 21px;
     border-radius: 15px;
+    
    }
 
 .hr-line {
@@ -92,6 +95,9 @@ export default {
    
 }
 
+.icon{
+    margin: 10px 0px 0px 28px;
+}
 .selectt{
     font-size: 20px;
 }
@@ -100,28 +106,28 @@ export default {
   background:#F1E9E9; 
   width: 80%;
   font-size: 22px;
-  padding: 12px 0px 7px 20px;
-  margin: 8px 0;
+  /* padding: 12px 0px 7px 20px; */
+  margin: 46px 15px 10px 28px;
   box-sizing: border-box;
   border: none; 
   outline: none;
   border-bottom: 2px solid rgba(12, 4, 58, 0.8);
 }
 
-input[type=text] {
+input[type=text], .selecttt {
+  margin:0px 0px 0px 90px;
+  padding-left: 0%; 
   background:#F1E9E9; 
-  width: 80%;
+  width: 276px;
   font-size: 16px;
-  padding: 0px 0px 5px 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border: none; 
   outline: none;
  
 }
 .btn_edit{
-    margin-left:auto;
-    margin-right:auto;
+    margin:0 auto;
+    display: block;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -134,6 +140,7 @@ input[type=text] {
     border-radius: 5px;
     border-color: none;
     color: #3B335E;
+    /* align-items: center; */
 }
 
 
