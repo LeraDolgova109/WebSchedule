@@ -68,7 +68,8 @@
     display: block;
     width: 100%;
     padding: .75rem 2.5rem .75rem 1rem;
-    background: rgba(255, 255, 255, 0.8);
+    background:#F1E9E9; 
+    opacity: 0.8;
     border-radius: 12px;
     -webkit-appearance: none;
     appearance: none;
