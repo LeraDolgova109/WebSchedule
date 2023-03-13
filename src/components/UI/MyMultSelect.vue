@@ -1,6 +1,6 @@
 <template>
     <div class="selectt" >
-        <select :value="modelValue" @change="changeOption" multiple>
+        <select v-bind:value="modelValue" @change="changeOption" multiple="true">
             <option disabled value="" selected>{{ name }}</option>
             <option
               v-for="option in options"

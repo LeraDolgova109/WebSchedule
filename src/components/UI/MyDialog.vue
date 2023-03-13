@@ -52,7 +52,7 @@
     data(){
       return{
         selectedClassname: "",
-        selectedGroup: "",
+        selectedGroup: [],
         selectedTeacher: '',
         selectedClassroom: '',
         selectedPeriod: '',
@@ -63,8 +63,8 @@
         period: 'Период',
         optionsPeriod: [
           {id: 0, name: "Единожды"},
-          {id: 1, name: "Каждую неделю"},
-          {id: 2, name: "Каждый месяц"}
+          {id: 1, name: "На месяц"},
+          {id: 2, name: "На 2 месяца"}
         ],
         incorrect: false,
         errText: "Все поля должны быть выбраны",
@@ -72,7 +72,10 @@
     },
     props: {
       idBlock:{
-        type:String
+        type: String
+      },
+      mondayDate:{
+        type: Date
       },
       show: {
         type: Boolean,
@@ -99,9 +102,35 @@
       hideDialog() {
         this.$emit('update:show', false)
       },
-      
+      datePeriod(){
+        let period = 0;
+        let date_start = new Date(this.mondayDate.getFullYear(), this.mondayDate.getMonth(), this.mondayDate.getDate() + 1);
+        let date_end;
+        for (let i=0; i < this.optionsPeriod.length; i++){
+            if (this.optionsPeriod[i].name == this.selectedPeriod){
+              period = this.optionsPeriod[i].id;
+              break;
+            }
+          }
+        switch(period){
+          case 0:
+            date_end = new Date(date_start.getFullYear(), date_start.getMonth(), date_start.getDate() + 5);
+            break;
+          case 1:
+            date_end = new Date(date_start.getFullYear(), date_start.getMonth(), date_start.getDate() + 31);
+            break;
+          case 2:
+            date_end = new Date(date_start.getFullYear(), date_start.getMonth(), date_start.getDate() + 60);
+            break;
+        }
+        let str_start  = date_start.toISOString().substring(0, 10);
+        let str_end = date_end.toISOString().substring(0, 10);
+        return {str_start, str_end}
+      },
       async postChanges(){
         
+        let date_start, date_end = this.datePeriod();
+          console.log(date_start, date_end)
         if (this.selectedClassname == '' || this.selectedGroup == [] || this.selectedTeacher == '' || this.selectedClassroom == '' || this.selectedPeriod == ''){
             this.incorrect = true;
         }
@@ -110,8 +139,8 @@
           let timeslot_id = this.idBlock;
           let subject_id, teacher_id, classroom_id;
           let groups_id = [];
-          let date_start =  "2023-03-01";
-          let date_end = "2023-03-31";
+          let date_start = this.datePeriod().str_start;
+          let date_end = this.datePeriod().str_end;
           let period = "1";
           for (let i=0; i < this.optionsClassname.length; i++){
             if (this.optionsClassname[i].name == this.selectedClassname){
@@ -150,7 +179,7 @@
                   "period" : period,
                   "groups_id" : groups_id
               };
-              // console.log(newClass);
+               console.log(newClass);
           try{
             const response = await axios.post("http://185.46.8.41/api/class", newClass, { headers });
             location.reload();

@@ -3,6 +3,7 @@
         <my-dialog
             v-model:show="dialogVisible"
             :idBlock=idBlock
+            :mondayDate=mondayDate
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
             :optionsTeacher=optionsTeacher
@@ -28,6 +29,9 @@
     props:{
         id: {
             type: String
+        },
+        mondayDate: {
+            type: Date
         },
         time_blocks:{
             type: Array,

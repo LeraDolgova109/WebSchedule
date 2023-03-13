@@ -52,6 +52,7 @@
           <my-block 
             id="1"
             class="block1 block2"
+            :mondayDate=monday
             :time_blocks=time_blocks1
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -61,6 +62,7 @@
           <my-block 
             id="8"
             class="block1" 
+            :mondayDate=monday
             :time_blocks=time_blocks8
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -70,6 +72,7 @@
           <my-block 
             id="15"
             class="block1" 
+            :mondayDate=monday
             :time_blocks=time_blocks15
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -79,6 +82,7 @@
           <my-block 
             id="22"
             class="block1"
+            :mondayDate=monday
             :time_blocks=time_blocks22
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -88,6 +92,7 @@
           <my-block 
             id="29"
             class="block1" 
+            :mondayDate=monday
             :time_blocks=time_blocks29
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -97,6 +102,7 @@
           <my-block 
             id="36"
             class="block1 block3" 
+            :mondayDate=monday
             :time_blocks=time_blocks36
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -111,6 +117,7 @@
           <my-block
             id="2"
             class="block2"
+            :mondayDate=monday
             :time_blocks=time_blocks2
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -119,6 +126,7 @@
           />
           <my-block
             id="9"
+            :mondayDate=monday
             :time_blocks=time_blocks9
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -127,6 +135,7 @@
           />
           <my-block
             id="16"
+            :mondayDate=monday
             :time_blocks=time_blocks16
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -135,6 +144,7 @@
           />
           <my-block
             id="23"
+            :mondayDate=monday
             :time_blocks=time_blocks23
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -143,6 +153,7 @@
           />
           <my-block
             id="30"
+            :mondayDate=monday
             :time_blocks=time_blocks30
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -152,6 +163,7 @@
           <my-block
             id="37"
             class="block3"
+            :mondayDate=monday
             :time_blocks=time_blocks37
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -166,6 +178,7 @@
         <my-block
             id="3"
             class="block2"
+            :mondayDate=monday
             :time_blocks=time_blocks3
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -174,6 +187,7 @@
           />
           <my-block
             id="10"
+            :mondayDate=monday
             :time_blocks=time_blocks10
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -182,6 +196,7 @@
           />
           <my-block
             id="17"
+            :mondayDate=monday
             :time_blocks=time_blocks17
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -190,6 +205,7 @@
           />
           <my-block
             id="24"
+            :mondayDate=monday
             :time_blocks=time_blocks24
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -198,6 +214,7 @@
           />
           <my-block
             id="31"
+            :mondayDate=monday
             :time_blocks=time_blocks31
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -207,6 +224,7 @@
           <my-block
             id="38"
             class="block3"
+            :mondayDate=monday
             :time_blocks=time_blocks38
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -221,6 +239,7 @@
         <my-block
             id="4"
             class="block2"
+            :mondayDate=monday
             :time_blocks=time_blocks4
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -229,6 +248,7 @@
           />
           <my-block
             id="11"
+            :mondayDate=monday
             :time_blocks=time_blocks11
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -237,6 +257,7 @@
           />
           <my-block
             id="18"
+            :mondayDate=monday
             :time_blocks=time_blocks18
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -245,6 +266,7 @@
           />
           <my-block
             id="25"
+            :mondayDate=monday
             :time_blocks=time_blocks25
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -253,6 +275,7 @@
           />
           <my-block
             id="32"
+            :mondayDate=monday
             :time_blocks=time_blocks32
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -262,6 +285,7 @@
           <my-block
             id="39"
             class="block3"
+            :mondayDate=monday
             :time_blocks=time_blocks39
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -276,6 +300,7 @@
         <my-block
             id="5"
             class="block2"
+            :mondayDate=monday
             :time_blocks=time_blocks5
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -284,6 +309,7 @@
           />
           <my-block
             id="12"
+            :mondayDate=monday
             :time_blocks=time_blocks12
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -292,6 +318,7 @@
           />
           <my-block
             id="19"
+            :mondayDate=monday
             :time_blocks=time_blocks19
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -300,6 +327,7 @@
           />
           <my-block
             id="26"
+            :mondayDate=monday
             :time_blocks=time_blocks26
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -308,6 +336,7 @@
           />
           <my-block
             id="33"
+            :mondayDate=monday
             :time_blocks=time_blocks33
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -316,6 +345,7 @@
           />
           <my-block
             id="40"
+            :mondayDate=monday
             class="block3"
             :time_blocks=time_blocks40
             :optionsClassname=optionsClassname
@@ -331,6 +361,7 @@
         <my-block
             id="6"
             class="block2"
+            :mondayDate=monday
             :time_blocks=time_blocks6
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -339,6 +370,7 @@
           />
           <my-block
             id="13"
+            :mondayDate=monday
             :time_blocks=time_blocks13
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -347,6 +379,7 @@
           />
           <my-block
             id="20"
+            :mondayDate=monday
             :time_blocks=time_blocks20
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -355,6 +388,7 @@
           />
           <my-block
             id="27"
+            :mondayDate=monday
             :time_blocks=time_blocks27
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -363,6 +397,7 @@
           />
           <my-block
             id="34"
+            :mondayDate=monday
             :time_blocks=time_blocks34
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -372,6 +407,7 @@
           <my-block
             id="41"
             class="block3"
+            :mondayDate=monday
             :time_blocks=time_blocks41
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -386,6 +422,7 @@
         <my-block 
             id="7"
             class="block2 block4" 
+            :mondayDate=monday
             :time_blocks=time_blocks7
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -395,6 +432,7 @@
           <my-block 
             id="14"
             class="block4" 
+            :mondayDate=monday
             :time_blocks=time_blocks14
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -404,6 +442,7 @@
           <my-block 
             id="21"
             class="block4" 
+            :mondayDate=monday
             :time_blocks=time_blocks21
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -413,6 +452,7 @@
           <my-block 
             id="28"
             class="block4" 
+            :mondayDate=monday
             :time_blocks=time_blocks28
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -422,6 +462,7 @@
           <my-block 
             id="35"
             class="block4" 
+            :mondayDate=monday
             :time_blocks=time_blocks35
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -431,6 +472,7 @@
           <my-block 
             id="42"
             class="block3 block4" 
+            :mondayDate=monday
             :time_blocks=time_blocks42
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -607,25 +649,7 @@ export default {
         buildingName: info.classroom.building.address,
         groupName: groupsName}
     },
-    async loginRequest(){
-        // axios.defaults.withCredentials = true;
-        //     try {
-        //         const response = await axios.post('http://185.46.8.41/login', {
-        //         "email":"admin@gmail.com",
-        //         "password":"admin"
-        //     },);
-        //     }catch (e){
-        //         if(e.response.status < 500){
-        //             alert(e.response.data.message);
-        //         }
-        //         else alert('An error has occurred! Try again.');
-        //     }
-        },
     async fill_timeslots(){
-      // await axios.post('http://185.46.8.41/logout');
-      //       await axios.get('http://185.46.8.41/sanctum/csrf-cookie').then(response => {
-      //           this.loginRequest();
-      //       });
       let group_id, teacher_id, classroom_id;
       localStorage.getItem("selectedGroup") == "null" ? group_id = null : group_id = Number(localStorage.getItem("selectedGroup"));
       localStorage.getItem("selectedTeacher") == "null" ? teacher_id = null : teacher_id = Number(localStorage.getItem("selectedTeacher"));
