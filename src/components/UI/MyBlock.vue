@@ -2,6 +2,7 @@
     <div class="block" @click="showDialog">
         <my-dialog
             v-model:show="dialogVisible"
+            :idBlock=idBlock
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
             :optionsTeacher=optionsTeacher
@@ -19,11 +20,15 @@
   export default {
     data(){
         return{
+            idBlock: this.id, 
             dialogVisible: false,
         }
     },
     name: 'my-block',
     props:{
+        id: {
+            type: String
+        },
         time_blocks:{
             type: Array,
             default: () => []
@@ -47,6 +52,7 @@
     },
     methods:{
         showDialog: function(){
+            this.idBlock = this.id;
             this.dialogVisible = true;
         }
     }

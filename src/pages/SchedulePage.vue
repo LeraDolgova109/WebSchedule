@@ -51,7 +51,7 @@
           </div>
           <my-block 
             id="1"
-            class="block1 block2" 
+            class="block1 block2"
             :time_blocks=time_blocks1
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -78,7 +78,7 @@
           />
           <my-block 
             id="22"
-            class="block1" 
+            class="block1"
             :time_blocks=time_blocks22
             :optionsClassname=optionsClassname
             :optionsGroup=optionsGroup
@@ -607,7 +607,25 @@ export default {
         buildingName: info.classroom.building.address,
         groupName: groupsName}
     },
+    async loginRequest(){
+        // axios.defaults.withCredentials = true;
+        //     try {
+        //         const response = await axios.post('http://185.46.8.41/login', {
+        //         "email":"admin@gmail.com",
+        //         "password":"admin"
+        //     },);
+        //     }catch (e){
+        //         if(e.response.status < 500){
+        //             alert(e.response.data.message);
+        //         }
+        //         else alert('An error has occurred! Try again.');
+        //     }
+        },
     async fill_timeslots(){
+      // await axios.post('http://185.46.8.41/logout');
+      //       await axios.get('http://185.46.8.41/sanctum/csrf-cookie').then(response => {
+      //           this.loginRequest();
+      //       });
       let group_id, teacher_id, classroom_id;
       localStorage.getItem("selectedGroup") == "null" ? group_id = null : group_id = Number(localStorage.getItem("selectedGroup"));
       localStorage.getItem("selectedTeacher") == "null" ? teacher_id = null : teacher_id = Number(localStorage.getItem("selectedTeacher"));

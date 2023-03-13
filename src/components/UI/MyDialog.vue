@@ -37,7 +37,7 @@
             :options="optionsGroup"
             :name="group"
           />
-        </div>
+          </div>
         <my-button style="width: 500px; margin-top: 80px;" @click="postChanges">Сохранить</my-button>
         <span v-if="incorrect">Все поля должны быть выбраны</span>
       </div>
@@ -52,7 +52,7 @@
     data(){
       return{
         selectedClassname: "",
-        selectedGroup: [],
+        selectedGroup: "",
         selectedTeacher: '',
         selectedClassroom: '',
         selectedPeriod: '',
@@ -70,6 +70,9 @@
       }
     },
     props: {
+      idBlock:{
+        type:String
+      },
       show: {
         type: Boolean,
         default: false
@@ -95,43 +98,62 @@
       hideDialog() {
         this.$emit('update:show', false)
       },
+      
       async postChanges(){
-        if (this.selectedClassname == 'this.' || this.selectedGroup == '' || this.selectedTeacher == '' || this.selectedClassroom == '' || this.selectedPeriod == ''){
+        
+        if (this.selectedClassname == '' || this.selectedGroup == [] || this.selectedTeacher == '' || this.selectedClassroom == '' || this.selectedPeriod == ''){
             this.incorrect = true;
         }
         else{
           this.incorrect = false;
-
+          let timeslot_id = this.idBlock;
+          let subject_id, teacher_id, classroom_id;
+          let groups_id = [];
+          let date_start =  "2023-03-01";
+          let date_end = "2023-03-31";
+          let period = "1";
+          console.log(this.selectedGroup);
+          for (let i=0; i < this.optionsClassname.length; i++){
+            if (this.optionsClassname[i].name == this.selectedClassname){
+              subject_id = this.optionsClassname[i].id;
+              break;
+            }
+          }
+          for (let i=0; i < this.optionsTeacher.length; i++){
+            if (this.optionsTeacher[i].name == this.selectedTeacher){
+              teacher_id = this.optionsTeacher[i].id;
+              break;
+            }
+          }
+          for (let i=0; i < this.optionsClassRoom.length; i++){
+            if (this.optionsClassRoom[i].name == this.selectedClassroom){
+              classroom_id = this.optionsClassRoom[i].id;
+              break;
+            }
+          }
+          for (let i=0; i < this.optionsGroup.length; i++){
+            
+            console.log(this.optionsGroup[i].name);
+            if (this.optionsGroup[i].name == this.selectedGroup){
+              groups_id.push(this.optionsGroup[i].id);
+            }
+          }
+          const newClass = {
+                  "subject_id" : subject_id,
+                  "teacher_id" : teacher_id,
+                  "classroom_id" : classroom_id,
+                  "timeslot_id" : timeslot_id,
+                  "date_start" : date_start,
+                  "date_end" : date_end,
+                  "period" : period,
+                  "groups_id" : groups_id
+              };
+              console.log(newClass);
           try{
-            // const headers = { 
-            //   "Access-Control-Allow-Origin": "*",
-            //   "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-            //   "Access-Control-Allow-Headers": "X-Requested-With"
-            // };
-            // const pass = {
-            //     "email":"admin@gmail.com",
-            //     "password":"admin"
-            // }
             
-            // const response = await axios.get("http://185.46.8.41/sanctum/csrf-cookie");
-            // console.log(response);
-
-            // const response1 = await axios.post("http://185.46.8.41/login", pass, headers);
-            // console.log(response1);
+            const response = await axios.post("http://185.46.8.41/api/class", newClass);
+            location.reload();
             
-            // const newClass = {
-            //     "subject_id" : "3",
-            //     "teacher_id" : "3",
-            //     "classroom_id" : "2",
-            //     "timeslot_id" : "8",
-            //     "date_start" : "2023-03-01",
-            //     "date_end" : "2023-03-31",
-            //     "period" : "1",
-            //     "groups_id" : [
-            //         9,10
-            //     ]
-            // };
-            // const response = await axios.post("http://185.46.8.41/api/class", newClass, {headers});
           } catch (e){
             console.log(e);
         };
@@ -171,6 +193,35 @@
     height: 40px;
     margin-left: 20px;
   }
+
+  .selectm {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 420px;
+    height: 40px;
+    margin-top: 20px;
+    border: none; 
+    outline: none;
+}
+
+.selectm select {
+    display: block;
+    width: 100%;
+    padding: .75rem 2.5rem .75rem 1rem;
+    background: none;
+    border: none; 
+    border-radius: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #0D053B;
+}
 
   .select-name{
     width: 500px; 
