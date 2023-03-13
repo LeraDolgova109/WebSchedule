@@ -3,8 +3,7 @@
   <div class="app"> 
     <router-view></router-view>
   </div>
-  <!-- <my-reg :show="true"></my-reg> -->
-  <my-avtoriz :show="true"></my-avtoriz>
+
 </template>
 
 <script>

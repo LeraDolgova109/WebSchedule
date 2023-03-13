@@ -6,8 +6,6 @@ import MyCard from "@/components/UI/MyCard";
 import MyBlock from "@/components/UI/MyBlock";
 import MyDialog from "@/components/UI/MyDialog";
 import MyDialoge from "@/components/UI/MyDialoge";
-import MyReg from "@/components/UI/MyReg";
-import MyAvtoriz from "@/components/UI/MyAvtoriz";
 
 export default [
     MyButton,
@@ -18,6 +16,4 @@ export default [
     MyDialoge,
     MyMultSelect,
     MyCastomSelect,
-    MyReg,
-    MyAvtoriz,
 ];

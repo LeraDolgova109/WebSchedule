@@ -1,31 +1,76 @@
 <template>
     <div class="navbar">
         <div class="navbar__btns" style="margin-left: 115px" v-if="this.$route.path === '/'">
+            <div class="left">
             <button class="selected-button" @click="$router.push('/');">
                 Главная
             </button>
             <button class="button" style="margin-left: 120px" @click="$router.push('/schedule');">
                 Расписание
             </button>
+            </div>
+            <div  class="right">
+            <button class="button" style="margin-right: 115px" @click="$router.push('/login');">
+                <span>{{ buttonText }}</span>
+            </button>
         </div>
-        <div class="navbar__btns" style="margin-left: 115px" v-else>
+        </div>
+        <div class="navbar__btns" style="margin-left: 115px" v-else-if="this.$route.path === '/schedule'">
+            <div class="left">
             <button class="button" @click="$router.push('/');">
                 Главная
             </button>
             <button class="selected-button" style="margin-left: 120px" @click="$router.push('/schedule');">
                 Расписание
             </button>
+            </div>
+            <div class="right">
+            <button class="button" style="margin-right: 115px" @click="$router.push('/login');">
+                <span>{{ buttonText }}</span>
+            </button>
+            </div>
         </div>
-        <div >
-            
-            
+        <div class="navbar__btns" style="margin-left: 115px" v-else>
+            <div class="left"> 
+            <button class="button" @click="$router.push('/');">
+                Главная
+            </button>
+            <button class="button" style="margin-left: 120px" @click="$router.push('/schedule');">
+                Расписание
+            </button>
         </div>
+        <div class="right">
+            <button class="selected-button" style="margin-right: 115px"  @click="$router.push('/login');">
+                <span>{{ buttonText }}</span>
+            </button>
+        </div>
+    <div >
     </div>
+    </div>
+</div>
 </template>
 
 <script>
+
 export default{
-    
+    dsts(){
+        return{
+            buttonText: "Вход",
+        }
+    },
+    methods:{
+        checkLogin(){
+            if(localStorage.getItem('token') != null){
+                this.buttonText = "Выход";
+            }
+            else{
+                this.buttonText = "Вход";
+            }
+        }
+    },
+    beforeMount(){
+        this.checkLogin();
+    }
 }
 </script>
 
@@ -41,6 +86,18 @@ export default{
     position: relative;
 }
 
+.navbar__btns{
+    display:table;
+    width: 100%;
+}
+.left{
+    display: table-cell;
+    text-align: left;
+}
+.right{
+    display: table-cell;
+    text-align: right;
+}
 .button{
     font-family: 'Inter';
     font-style: normal;
