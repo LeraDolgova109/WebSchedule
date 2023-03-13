@@ -18,8 +18,8 @@
     components: {
         MyAvtoriz
       },
-    }
-  </script>
+  }
+</script>
   
   <style scoped>
   

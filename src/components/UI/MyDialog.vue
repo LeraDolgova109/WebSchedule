@@ -39,7 +39,7 @@
           />
           </div>
         <my-button style="width: 500px; margin-top: 80px;" @click="postChanges">Сохранить</my-button>
-        <span v-if="incorrect">Все поля должны быть выбраны</span>
+        <span v-if="incorrect">{{ errText }}</span>
       </div>
     </div>
   </template>
@@ -67,6 +67,7 @@
           {id: 2, name: "Каждый месяц"}
         ],
         incorrect: false,
+        errText: "Все поля должны быть выбраны",
       }
     },
     props: {
@@ -112,7 +113,6 @@
           let date_start =  "2023-03-01";
           let date_end = "2023-03-31";
           let period = "1";
-          console.log(this.selectedGroup);
           for (let i=0; i < this.optionsClassname.length; i++){
             if (this.optionsClassname[i].name == this.selectedClassname){
               subject_id = this.optionsClassname[i].id;
@@ -132,12 +132,14 @@
             }
           }
           for (let i=0; i < this.optionsGroup.length; i++){
-            
-            console.log(this.optionsGroup[i].name);
             if (this.optionsGroup[i].name == this.selectedGroup){
               groups_id.push(this.optionsGroup[i].id);
             }
           }
+          
+          const headers = { 
+            "Authorization": "Bearer " + localStorage.getItem("token")
+          };
           const newClass = {
                   "subject_id" : subject_id,
                   "teacher_id" : teacher_id,
@@ -148,18 +150,18 @@
                   "period" : period,
                   "groups_id" : groups_id
               };
-              console.log(newClass);
+              // console.log(newClass);
           try{
-            
-            const response = await axios.post("http://185.46.8.41/api/class", newClass);
+            const response = await axios.post("http://185.46.8.41/api/class", newClass, { headers });
             location.reload();
-            
           } catch (e){
+            this.incorrect = true;
+            this.errText = 'Необходимо войти в систему';
             console.log(e);
         };
-        }
-      },
-    },
+      }
+        },
+      },    
   }
   </script>
   

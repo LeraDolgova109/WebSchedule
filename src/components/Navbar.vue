@@ -10,7 +10,7 @@
             </button>
             </div>
             <div  class="right">
-            <button class="button" style="margin-right: 115px" @click="$router.push('/login');">
+            <button class="button" style="margin-right: 115px" @click="changeOption()">
                 <span>{{ buttonText }}</span>
             </button>
         </div>
@@ -25,7 +25,7 @@
             </button>
             </div>
             <div class="right">
-            <button class="button" style="margin-right: 115px" @click="$router.push('/login');">
+            <button class="button" style="margin-right: 115px" @click="changeOption()">
                 <span>{{ buttonText }}</span>
             </button>
             </div>
@@ -40,7 +40,7 @@
             </button>
         </div>
         <div class="right">
-            <button class="selected-button" style="margin-right: 115px"  @click="$router.push('/login');">
+            <button class="selected-button" style="margin-right: 115px"  @click="changeOption()">
                 <span>{{ buttonText }}</span>
             </button>
         </div>
@@ -59,12 +59,20 @@ export default{
         }
     },
     methods:{
-        checkLogin(){
-            if(localStorage.getItem('token') != null){
+        async checkLogin(){
+            if(localStorage.getItem('token') != "null"){
                 this.buttonText = "Выход";
             }
             else{
                 this.buttonText = "Вход";
+            }
+        },
+        changeOption(){
+            if(localStorage.getItem('token') != "null"){
+                this.$router.push('/logout');
+            }
+            else{
+                this.$router.push('/login');
             }
         }
     },

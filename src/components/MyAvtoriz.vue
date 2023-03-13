@@ -1,5 +1,5 @@
 <template>
-    <div class="avt" v-if="show">
+    <div class="avt">
         <div class="avt__content">
             <slot>
                <p class="startText" >Добро пожаловать в систему расписания</p>
@@ -7,9 +7,10 @@
                <my-button style="width: 102x; height: 30px;margin:auto; border-radius: 15px;">Войти</my-button>
                <button class="button" @click="changeCard">Регистрация</button>
                  </div>
-               <input type="text" id="e-mail" placeholder="e-mail">
-               <input type="text" id="pass" placeholder="Пароль">
-              <my-button style="width: 446px; margin-top: 40px; border-radius: 15px;" @click="postChanges">Войти</my-button>
+               <input v-model="user.email" type="text" id="e-mail" placeholder="e-mail">
+               <input v-model="user.password" type="text" id="pass" placeholder="Пароль">
+              <my-button style="width: 446px; margin-top: 40px; border-radius: 15px;" @click="login">Войти</my-button>
+              <span v-if="incorrect">{{ errText }}</span>
             </slot>
         </div>
     </div>
@@ -17,10 +18,17 @@
 
 
 <script>
+import axios from 'axios';
+
 export default {
     data(){
         return{
-            showReg: false
+            user: {
+                email: '',
+                password: '',
+            },
+            incorrect: false,
+            errText: ''
         }
     },
     name: 'my-avtoriz',
@@ -33,6 +41,25 @@ export default {
     methods:{
         changeCard(){
             this.$router.push('/reg');
+        },
+        async login(){
+            try{
+                const response = await axios.post("http://185.46.8.41/api/auth/login", {
+                    "email": String(this.user.email),
+                    "password": String(this.user.password)
+                });
+                localStorage.setItem("token", response.data.token);
+                this.$router.push('/')
+            }catch(e){
+                this.incorrect = true;
+                if(e.response.request.status == 422){
+                    this.errText = "Некорректный email"
+                }
+                else if(e.response.request.status == 400){
+                    this.errText = "Неправильный email или пароль"
+                }
+            }
+            
         }
     }
 }
@@ -109,5 +136,21 @@ line-height: 24px;
 .button:hover{
     color: rgb(255, 255, 255);
 }
+
+span{
+    margin-top: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: table; 
+    margin: 0 auto;
+    color: #Ffff; 
+  }
+  span:hover{
+    color:#F1E9E9; 
+    opacity: 0.8;
+  }
 
 </style>

@@ -3,6 +3,7 @@ import HomePage from '../pages/HomePage.vue'
 import SchedulePage from '../pages/SchedulePage.vue'
 import AutorisPage from '../pages/AutorisPage.vue'
 import RegPage from '../pages/RegPage.vue'
+import LogoutPage from '../pages/LogoutPage.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/reg',
     name: 'reg',
     component: RegPage
+  },
+  {
+    path: '/logout',
+    name: 'logout',
+    component: LogoutPage
   },
 ]
 
