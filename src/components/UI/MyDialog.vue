@@ -128,9 +128,6 @@
         return {str_start, str_end}
       },
       async postChanges(){
-        
-        let date_start, date_end = this.datePeriod();
-          console.log(date_start, date_end)
         if (this.selectedClassname == '' || this.selectedGroup == [] || this.selectedTeacher == '' || this.selectedClassroom == '' || this.selectedPeriod == ''){
             this.incorrect = true;
         }
@@ -179,13 +176,12 @@
                   "period" : period,
                   "groups_id" : groups_id
               };
-               console.log(newClass);
           try{
             const response = await axios.post("http://185.46.8.41/api/class", newClass, { headers });
             location.reload();
           } catch (e){
             this.incorrect = true;
-            this.errText = 'Необходимо войти в систему';
+            this.errText = 'Нет прав для добавления пары';
             console.log(e);
         };
       }

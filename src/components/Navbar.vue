@@ -59,7 +59,7 @@ export default{
         }
     },
     methods:{
-        async checkLogin(){
+        checkLogin(){
             if(localStorage.getItem('token') == "null" || localStorage.getItem('token') == null){
                 this.buttonText = "Вход";
             }
@@ -69,16 +69,18 @@ export default{
         },
         changeOption(){
             if(localStorage.getItem('token') == "null" || localStorage.getItem('token') == null){
+                this.buttonText = "Вход";
                 this.$router.push('/login');
             }
             else{
+                this.buttonText = "Выход";
                 this.$router.push('/logout');
             }
         }
     },
     beforeMount(){
         this.checkLogin();
-    }
+    },
 }
 </script>
 

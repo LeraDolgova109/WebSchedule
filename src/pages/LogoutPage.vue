@@ -13,7 +13,6 @@
           };
             try{
                 const response = await axios.post("http://185.46.8.41/api/auth/logout", {}, { headers });
-                console.log(response);
                 
                 localStorage.setItem("token", "null");
                 this.$router.push("/login");
