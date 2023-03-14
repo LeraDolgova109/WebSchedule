@@ -60,19 +60,19 @@ export default{
     },
     methods:{
         async checkLogin(){
-            if(localStorage.getItem('token') != "null" || localStorage.getItem('token') == null){
-                this.buttonText = "Выход";
+            if(localStorage.getItem('token') == "null" || localStorage.getItem('token') == null){
+                this.buttonText = "Вход";
             }
             else{
-                this.buttonText = "Вход";
+                this.buttonText = "Выход";
             }
         },
         changeOption(){
-            if(localStorage.getItem('token') != "null" || localStorage.getItem('token') == null){
-                this.$router.push('/logout');
+            if(localStorage.getItem('token') == "null" || localStorage.getItem('token') == null){
+                this.$router.push('/login');
             }
             else{
-                this.$router.push('/login');
+                this.$router.push('/logout');
             }
         }
     },
